@@ -1,0 +1,31 @@
+<!doctype html>
+{% extends 'climate_layout.html' %}
+
+{% block title %}Aloha! | {{ super() }}{% endblock %}
+
+{% block header %}
+Aloha! This is the API for Hawaii Climate Data 
+{% endblock %}
+
+{% block content %}
+You can get the following: <br>
+<br>
+Dictionary of precipitation measurements from the last year <br>
+<a href="/api/v1.0/precipitation">/api/v1.0/precipitation</a> <br>
+<br>
+List of stations from the dataset<br>
+<a href="/api/v1.0/stations">/api/v1.0/stations</a> <br>
+<br>
+List of temperatures from the last year<br>
+<a href="/api/v1.0/tobs">/api/v1.0/tobs</a> <br>
+<br>
+List of the min, avg, and max temperature for the start date to the last date in the dataset
+<br>
+Replace {start date} with your date in the format yyyy-mm-dd <br>
+/api/v1.0/{start date}<br>
+<br>
+List of the min, avg, and max temperature for the start date through the end date
+<br>
+Replace {start date} and {end date} with your dates in the format yyyy-mm-dd <br>
+/api/v1.0/{start date}/{end date}<br>
+{% endblock %}
